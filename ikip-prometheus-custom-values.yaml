@@ -8,3 +8,12 @@ serverFiles:
         metrics_path: '/'
         static_configs:
           - targets: ['ikip-prometheus-aggregator:8000']
+      - job_name: 'ipso580g91'
+        static_configs:
+          - targets: ['10.11.0.107:9100']
+      - job_name: 'ipso380g90'
+        static_configs:
+          - targets: ['10.10.0.64:9100']
+      - job_name: 'ipso380gx'
+        static_configs:
+          - targets: ['192.168.51.101:9100']
