@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: prometheus-pv
+spec:
+  storageClassName: nfs-storage
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 20000Gi
+  nfs:
+    #path: /nfs/10T/wipodocs/DATABASE
+    #server: 10.10.0.111
+    path: /srv/chi_temp_nfs/prometheus
+    server: 192.168.51.107

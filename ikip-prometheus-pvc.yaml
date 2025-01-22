@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prometheus-server
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: nfs-storage
+  resources:
+    requests:
+      storage: 20000Gi
+  volumeName: prometheus-pv
